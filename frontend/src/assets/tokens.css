@@ -1,0 +1,94 @@
+/* ── Design Tokens · Enterprise Health ── */
+/* superdesign dashboard.md + taste-core · light-only, density-first */
+
+:root {
+  /* Canvas */
+  --canvas: #F8F9FB;
+  --surface: #FFFFFF;
+
+  /* Text — off-black, never pure #000 */
+  --text-primary: #1A1D23;
+  --text-secondary: #5F6B7A;
+  --text-tertiary: #8E97A4;
+
+  /* Accent — amber, non-purple, single accent rule */
+  --accent: #E8950A;
+  --accent-hover: #C77D08;
+  --accent-soft: rgba(232, 149, 10, 0.08);
+  --accent-ring: rgba(232, 149, 10, 0.20);
+
+  /* Status — Okabe-Ito inspired, colorblind-safe */
+  --status-success: #009E73;
+  --status-warning: #E69F00;
+  --status-danger: #D55E00;
+  --status-info: #3B7DD8;
+
+  /* Borders */
+  --border: #E5E8EC;
+  --border-light: #EEF0F3;
+
+  /* Font stack — Geist for Latin/numbers, system CJK fallback */
+  --font: 'Geist', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Radius — one system */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  /* Shadows — tinted, never pure black */
+  --shadow-xs: 0 1px 2px rgba(26, 29, 35, 0.04);
+  --shadow-sm: 0 1px 3px rgba(26, 29, 35, 0.06);
+  --shadow-md: 0 4px 12px rgba(26, 29, 35, 0.08);
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Layout */
+  --sidebar-width: 232px;
+  --topbar-height: 56px;
+
+  /* Density — compact by default (dashboard.md DEN 7) */
+  --row-height: 36px;
+  --cell-padding: 8px 12px;
+
+  /* Typography scale */
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 20px;
+  --text-2xl: 26px;
+  --text-3xl: 34px;
+
+  /* Numeric — tabular everywhere */
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Reset a few Element Plus overrides ── */
+.el-button--primary {
+  --el-button-bg-color: var(--accent);
+  --el-button-border-color: var(--accent);
+  --el-button-hover-bg-color: var(--accent-hover);
+  --el-button-hover-border-color: var(--accent-hover);
+  --el-button-active-bg-color: var(--accent-hover);
+}
+
+.el-menu {
+  --el-menu-bg-color: transparent;
+  --el-menu-hover-bg-color: var(--accent-soft);
+}
+
+/* Scrollbar — subtle */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }

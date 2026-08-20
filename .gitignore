@@ -1,0 +1,27 @@
+# Maven / Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python (工具脚本可能生成)
+__pycache__/
+*.pyc
+
+# 本地环境配置（含密钥）
+*.local.yml
+application-local.yml
